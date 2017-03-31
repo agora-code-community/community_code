@@ -8,8 +8,8 @@ require ("config.php");
     
     <head>       
         <!--this is the icon that appears in the tab. but it doesnt work properly on chrome-->
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon"> 
+        <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
         
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
         <meta http-equiv="Content-Style-Type" content="text/css">

@@ -6,7 +6,7 @@ $pagename = "Login";
 require("includes/config.php");
 require("includes/functions.php");
 if (isset($_POST['submit'])) {
-    $password = mysql_real_escape_string(sha1($_POST['password']));                              
+    $password = mysqli_real_escape_string($dbc,sha1($_POST['password']));
     $sql = "SELECT * FROM users WHERE username = '" . $_POST['username'] . "' AND password = '" . $password . "';";
     $result = mysqli_query($dbc, $sql);
     $numrows = mysqli_num_rows($result);
@@ -63,6 +63,10 @@ if (isset($_POST['submit'])) {
 
     if ($result && $numrows != 1) {
         echo "<p class='error'><small>Incorrect login, please try again!</small></p>";
+    }
+
+    else {
+         echo "<p> Login Successful</p>";
     }
 }
 ?>

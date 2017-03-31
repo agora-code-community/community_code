@@ -35,7 +35,7 @@ require("includes/header.php");
     $r = mysqli_query($dbc, $q);
 
 
-    echo mysql_error();
+    echo mysqli_error($dbc);
 
     while ($catrow = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 
